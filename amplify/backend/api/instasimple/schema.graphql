@@ -1,0 +1,32 @@
+enum ContentType {
+  IMAGE
+  VIDEO
+}
+
+type Content @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  source: String
+  type: ContentType
+}
+
+type TimelineItem @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  description: String
+  postTime: String
+  author: User @connection
+  content: Content @connection
+  comments: [Comment] @connection(keyName: "byTimelineItem", fields: ["id"])
+}
+
+type User @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  username: String
+  profilepic: String
+}
+
+type Comment @model @auth(rules: [{allow: public}]) @key(name: "byTimelineItem", fields: ["timelineitemID"]) {
+  id: ID!
+  body: String
+  timelineitemID: ID
+  author: User @connection
+}

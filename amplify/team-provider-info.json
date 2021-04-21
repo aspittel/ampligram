@@ -1,19 +1,19 @@
 {
   "staging": {
     "awscloudformation": {
-      "AuthRoleName": "amplify-timeline-staging-183754-authRole",
-      "UnauthRoleArn": "arn:aws:iam::691460774223:role/amplify-timeline-staging-183754-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::691460774223:role/amplify-timeline-staging-183754-authRole",
-      "Region": "us-east-2",
-      "DeploymentBucketName": "amplify-timeline-staging-183754-deployment",
-      "UnauthRoleName": "amplify-timeline-staging-183754-unauthRole",
-      "StackName": "amplify-timeline-staging-183754",
-      "StackId": "arn:aws:cloudformation:us-east-2:691460774223:stack/amplify-timeline-staging-183754/e63d6930-7de1-11eb-a251-066f83490874",
-      "AmplifyAppId": "d2b3ws5lgb3y5c"
+      "AuthRoleName": "amplify-instasimple-staging-162639-authRole",
+      "UnauthRoleArn": "arn:aws:iam::000691573582:role/amplify-instasimple-staging-162639-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::000691573582:role/amplify-instasimple-staging-162639-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-instasimple-staging-162639-deployment",
+      "UnauthRoleName": "amplify-instasimple-staging-162639-unauthRole",
+      "StackName": "amplify-instasimple-staging-162639",
+      "StackId": "arn:aws:cloudformation:us-east-1:000691573582:stack/amplify-instasimple-staging-162639/2f30f850-a1f5-11eb-98f5-0aa443d7245f",
+      "AmplifyAppId": "d1lgpumcdpdsz5"
     },
     "categories": {
       "auth": {
-        "Timeline": {}
+        "instasimple": {}
       }
     }
   }

@@ -12,13 +12,13 @@ export function CommentList ({ postId }) {
       setComments(postComments)
     }
     getComments()
-  }, [])
+  }, [postId])
 
   return (
     <Box>
       {comments.map(comment => (
         <Text key={comment.id}>
-          <Text as='b'>{comment.author.alias} </Text>
+          <Text as='b'>{comment.author.username} </Text>
           {comment.body}
         </Text>))}
     </Box>

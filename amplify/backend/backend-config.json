@@ -1,6 +1,6 @@
 {
   "api": {
-    "Timeline": {
+    "instasimple": {
       "service": "AppSync",
       "providerPlugin": "awscloudformation",
       "output": {
@@ -9,7 +9,7 @@
             "authenticationType": "API_KEY",
             "apiKeyConfig": {
               "apiKeyExpirationDays": 30,
-              "description": "api key description"
+              "description": "This is an api key"
             }
           },
           "additionalAuthenticationProviders": [
@@ -22,11 +22,17 @@
     }
   },
   "auth": {
-    "Timeline": {
+    "instasimple": {
       "service": "Cognito",
       "providerPlugin": "awscloudformation",
       "dependsOn": [],
       "customAuth": false
+    }
+  },
+  "storage": {
+    "s35d31a83f": {
+      "service": "S3",
+      "providerPlugin": "awscloudformation"
     }
   }
 }

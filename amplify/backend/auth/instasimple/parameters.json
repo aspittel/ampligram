@@ -1,8 +1,8 @@
 {
     "identityPoolName": "testAuthIdentityPool",
-    "allowUnauthenticatedIdentities": false,
-    "resourceNameTruncated": "timelib6bf00d8",
-    "userPoolName": "Timeline",
+    "allowUnauthenticatedIdentities": true,
+    "resourceNameTruncated": "instas80956ea6",
+    "userPoolName": "instasimple",
     "autoVerifiedAttributes": [
         "phone_number"
     ],
@@ -29,10 +29,10 @@
     "userpoolClientRefreshTokenValidity": 30,
     "userpoolClientWriteAttributes": [],
     "userpoolClientReadAttributes": [],
-    "userpoolClientLambdaRole": "Timelib6bf00d8_userpoolclient_lambda_role",
+    "userpoolClientLambdaRole": "instas80956ea6_userpoolclient_lambda_role",
     "userpoolClientSetAttributes": false,
-    "sharedId": "b6bf00d8",
-    "resourceName": "Timeline",
+    "sharedId": "80956ea6",
+    "resourceName": "instasimple",
     "authSelections": "identityPoolAndUserPool",
     "authRoleArn": {
         "Fn::GetAtt": [

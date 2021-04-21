@@ -15,9 +15,9 @@ Card.Header = function ({ author }) {
     <Box p={2}>
       <Flex>
         <Box d='flex' alignItems='baseline'>
-          <Avatar name={author.alias} />
+          <Avatar name={author.username} src={author.profilepic}/>
           <Box ml={2}>
-            <Text fontWeight='bold' fontSize='sm'>{author.alias}</Text>
+            <Text fontWeight='bold' fontSize='sm'>{author.username}</Text>
           </Box>
         </Box>
         <Spacer />
@@ -37,7 +37,7 @@ Card.Main = function ({ content }) {
           <video controls autoPlay>
             <source src={content.source} type='video/mp4' />
           </video>
-        ) : <Image src={content.source} />}
+        ) : <Image src={content.source} boxSize="100%"/>}
     </Box>
   )
 }
@@ -52,7 +52,7 @@ Card.Footer = function ({ author, description, timelineItemId, children }) {
       </Box>
       <Box mt={3}>
         <Text>
-          <Text as='b'>{author.alias}</Text>
+          <Text as='b'>{author.username}</Text>
           &nbsp;
           {description}
         </Text>
