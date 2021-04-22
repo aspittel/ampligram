@@ -11,18 +11,19 @@ export default function UserList() {
       const users = await DataStore.query(User)
       const getImageLinks = async () => {
         const usersWithPics = []
+
         for (let user of users) {
-          const userPic = await Storage.get(user.profilepic)
+          const userPics = await Storage.get(user.profilepic)
           usersWithPics.push({
             username: user.username,
-            profilepic: userPic,
+            profilepic: userPics,
             id: user.id
           })
         }
-        return usersWithPics
+          return usersWithPics
       }
-      const completeUsers = await getImageLinks()
-      setUsers(completeUsers)
+      const completedUsers = await getImageLinks()
+      setUsers(completedUsers)
     }
     pullData()
   }, [])

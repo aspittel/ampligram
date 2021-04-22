@@ -1,7 +1,7 @@
 {
     "identityPoolName": "testAuthIdentityPool",
     "allowUnauthenticatedIdentities": true,
-    "resourceNameTruncated": "instas80956ea6",
+    "resourceNameTruncated": "instas0fcac48c",
     "userPoolName": "instasimple",
     "autoVerifiedAttributes": [
         "phone_number"
@@ -29,9 +29,9 @@
     "userpoolClientRefreshTokenValidity": 30,
     "userpoolClientWriteAttributes": [],
     "userpoolClientReadAttributes": [],
-    "userpoolClientLambdaRole": "instas80956ea6_userpoolclient_lambda_role",
+    "userpoolClientLambdaRole": "instas0fcac48c_userpoolclient_lambda_role",
     "userpoolClientSetAttributes": false,
-    "sharedId": "80956ea6",
+    "sharedId": "0fcac48c",
     "resourceName": "instasimple",
     "authSelections": "identityPoolAndUserPool",
     "authRoleArn": {
