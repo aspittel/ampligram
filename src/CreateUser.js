@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { FormControl, FormLabel, Input, Container, Heading, Button } from '@chakra-ui/react'
-import { Storage, DataStore } from 'aws-amplify'
+import { API, Storage, DataStore } from 'aws-amplify'
 import { withAuthenticator } from '@aws-amplify/ui-react'
 import { User } from './models'
 
@@ -10,15 +10,6 @@ function CreateUser() {
 
   const handleSubmit = async e => {
     e.preventDefault()
-
-    const file = await Storage.put(profilePic.name, profilePic)
-
-    const newUser = await DataStore.save(new User({
-      username,
-      profilepic: profilePic.name
-    }))
-
-    console.log(newUser)
   }
 
   return (
@@ -41,4 +32,4 @@ function CreateUser() {
   )
 }
 
-export default withAuthenticator(CreateUser)
+export default CreateUser

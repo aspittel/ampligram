@@ -9,8 +9,6 @@ export function Timeline ({ children }) {
 
   useEffect(() => {
     const getTimeline = async () => {
-      const timelineData = await DataStore.query(TimelineItem)
-      setTimeline(timelineData)
     }
     getTimeline()
   }, [])

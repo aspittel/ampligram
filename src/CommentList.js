@@ -8,14 +8,13 @@ export function CommentList ({ postId }) {
   const [comments, setComments] = useState([])
   useEffect(() => {
     const getComments = async () => {
-      const postComments = await DataStore.query(Comment, p => p.timelineitemID === postId)
-      setComments(postComments)
+
     }
     getComments()
   }, [postId])
 
   return (
-    <Box>
+    <Box> 
       {comments.map(comment => (
         <Text key={comment.id}>
           <Text as='b'>{comment.author.username} </Text>

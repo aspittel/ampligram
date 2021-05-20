@@ -8,22 +8,6 @@ export default function UserList() {
 
   useEffect(() => {
     const pullData = async () => {
-      const users = await DataStore.query(User)
-      const getImageLinks = async () => {
-        const usersWithPics = []
-
-        for (let user of users) {
-          const userPics = await Storage.get(user.profilepic)
-          usersWithPics.push({
-            username: user.username,
-            profilepic: userPics,
-            id: user.id
-          })
-        }
-          return usersWithPics
-      }
-      const completedUsers = await getImageLinks()
-      setUsers(completedUsers)
     }
     pullData()
   }, [])
