@@ -1,0 +1,7 @@
+{
+  "httpMethod": "GET",
+  "body": {
+    "username": "aspittel",
+    "profilepic": "test.com"
+  }
+}
