@@ -8,13 +8,12 @@ export function CommentList ({ postId }) {
   const [comments, setComments] = useState([])
   useEffect(() => {
     const getComments = async () => {
-
     }
     getComments()
   }, [postId])
 
   return (
-    <Box> 
+    <Box>
       {comments.map(comment => (
         <Text key={comment.id}>
           <Text as='b'>{comment.author.username} </Text>

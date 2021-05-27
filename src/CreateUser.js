@@ -2,9 +2,10 @@ import { useState } from 'react'
 import { FormControl, FormLabel, Input, Container, Heading, Button } from '@chakra-ui/react'
 import { API, Storage, DataStore } from 'aws-amplify'
 import { withAuthenticator } from '@aws-amplify/ui-react'
+// import { listUsers } from './graphql/queries'
 import { User } from './models'
 
-function CreateUser() {
+function CreateUser () {
   const [username, setUsername] = useState('')
   const [profilePic, setProfilePic] = useState('')
 
@@ -16,15 +17,15 @@ function CreateUser() {
     <Container>
       <form onSubmit={handleSubmit}>
         <Heading>Create a New User</Heading>
-        <FormControl id="username">
+        <FormControl id='username'>
           <FormLabel>Username</FormLabel>
-          <Input type="text" onChange={ e => setUsername(e.target.value) }/>
+          <Input type='text' onChange={e => setUsername(e.target.value)} />
         </FormControl>
-        <FormControl id="profile-pic">
+        <FormControl id='profile-pic'>
           <FormLabel>Profile Picture</FormLabel>
-          <Input type="file" onChange={ e => setProfilePic(e.target.files[0]) }/>
+          <Input type='file' onChange={e => setProfilePic(e.target.files[0])} />
         </FormControl>
-        <Button type="submit">
+        <Button type='submit'>
           Create
         </Button>
       </form>
